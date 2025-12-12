@@ -1,18 +1,55 @@
-# CodingTest.UI
+**CodingTest.UI – CSV Viewer**
 
-Overview
-A WinForms app that loads `Resources/sample.csv` into a DataGridView, opens a dialog showing a cell value on double-click, and logs errors to `CodingTest_Log.txt` on the Desktop.
+A simple Windows Forms application that loads a CSV file into a table, shows the value of a cell on double-click, and logs all errors to a text file on the Desktop.
 
-Build & Run
-1. Open the solution in Visual Studio (2022/2026).
-2. If you modified the `.csproj` externally, right?click the project ? __Reload Project__.
-3. Build: __Build > Rebuild Solution__ (or __Clean Solution__ then __Rebuild Solution__).
-4. Run (F5). Double?click any cell to open the cell value dialog.
+**Overview**
 
-Notes
-- `Resources/sample.csv` must be included in the project as Content with `<CopyToOutputDirectory>Always</CopyToOutputDirectory>`.
-- Log file: `CodingTest_Log.txt` on the Desktop.
-- Ensure all `.Designer.cs` and `.resx` files are committed so the project builds without designer regeneration.
+The application:
 
-Submission
-- Commit and push all files to GitHub and send the repo link to the requested email.
+Loads a CSV file included in the project.
+
+Displays the data in a DataGridView.
+
+Opens a popup window showing the clicked cell value.
+
+Logs any errors to a Desktop log file.
+
+Runs immediately after cloning with no extra setup.
+
+**Folder Structure**
+Forms/            MainForm and CellValueForm
+Services/         CsvService and LoggerService
+Resources/        sample.csv
+Program.cs        Application entry point
+
+**How to Set Up**
+
+Clone the repository.
+
+Open CodingTest.UI.sln in Visual Studio.
+
+Ensure sample.csv has properties:
+
+Build Action: Content
+
+Copy to Output Directory: Copy Always
+
+Build and run the solution.
+
+**How to Use**
+
+Launch the application.
+
+The CSV loads automatically into the table.
+
+Double-click any cell to view its value in a popup.
+
+Check the Desktop for CodingTest_Log.txt if errors occur.
+
+**Requirements Covered**
+
+CSV loading
+
+Grid display
+
+Double-click popup
